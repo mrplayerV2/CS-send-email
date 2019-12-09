@@ -171,11 +171,9 @@ public class EmailUtil
             message.IsBodyHtml = true;
             SmtpClient emailHost = new SmtpClient();
             emailHost.Host = ConfigurationManager.AppSettings["mailServer"].ToString();
-            //----------------------
             string UserName = ConfigurationManager.AppSettings["UserName"].ToString();
             string Pw = ConfigurationManager.AppSettings["Password"].ToString();
             emailHost.Credentials = new System.Net.NetworkCredential(UserName, Pw);
-            //----------------------
             emailHost.Send(message);
             bRet = true;
         }
@@ -271,7 +269,6 @@ public class EmailUtil
             message.IsBodyHtml = true;
             SmtpClient emailHost = new SmtpClient();
             emailHost.Host = ConfigurationManager.AppSettings["mailServer"].ToString();
-            //----------------------
             string UserName = ConfigurationManager.AppSettings["UserName"].ToString();
             string Pw = ConfigurationManager.AppSettings["Password"].ToString();
             emailHost.Credentials = new System.Net.NetworkCredential(UserName, Pw);
